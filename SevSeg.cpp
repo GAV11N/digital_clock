@@ -1,39 +1,3 @@
-/* SevSeg Library
- 
- Copyright 2014 Dean Reading
- 
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at 
- http://www.apache.org/licenses/LICENSE-2.0
- 
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
- 
- 
- This library allows an Arduino to easily display numbers in decimal format on
- a 7-segment display without a separate 7-segment display controller.
- 
- Direct any questions or suggestions to deanreading@hotmail.com
- See the included readme for instructions.
- 
- CHANGELOG
- 
- Version 3.0 - November 2014
- Library re-design. A display with any number of digits can be used.
- Floats are supported. Support for using transistors for switching.
- Much more user friendly. No backwards compatibility.
- Uploaded to GitHub to simplify any further development.
- Version 2.3; Allows for brightness control.
- Version 2.2; Allows 1, 2 or 3 digit displays to be used.
- Version 2.1; Includes a bug fix.
- Version 2.0; Now works for any digital pin arrangement.
- Supports both common anode and common cathode displays.
- */
-
 #include "SevSeg.h"
 
 #define BLANK 10 // Must match with 'digitCodeMap', defined in 'setDigitCodes' 
