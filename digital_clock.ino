@@ -1,6 +1,7 @@
 // Gavin Andrew
 
 #include "SevSeg.h"
+ SevSeg sevseg;
 
 #define d1 13
 #define d2 12
@@ -17,22 +18,14 @@
 
 void setup() {
   // put your setup code here, to run once:
-  pinMode(dp,OUTPUT);
-  pinMode(d1, OUTPUT);
-  pinMode(d2, OUTPUT);
-  pinMode(d3, OUTPUT);
-  pinMode(d4, OUTPUT);
-  pinMode(a, OUTPUT);
+  byte numDigits = 4;
+   byte digitPins[] = {d1, d2, d3, d4};
+   byte segmentPins[] = {a, b, c, d, e, f, g, dp};
+   sevseg.begin(COMMON_CATHODE, numDigits, digitPins, segmentPins);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  
-   digitalWrite(d1, LOW);
-  digitalWrite(d2, LOW);
-  digitalWrite(d3, LOW);
-  digitalWrite(d4, LOW);
-
-  digitalWrite(dp, HIGH);
-  digitalWrite(a, HIGH);
+  sevseg.setNumber(1234,7);
+  sevseg.refreshDisplay();
+  sevseg.setBrightness(90);
 }
